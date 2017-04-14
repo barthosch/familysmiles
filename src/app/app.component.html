@@ -1,3 +1,9 @@
 <h1>
   {{title}}
 </h1>
+
+<ul>
+  <li *ngFor="let member of familymembers$ | async">
+    <input [(ngModel)]="member.$value" (keyup.enter)="alert('hallo');">
+  </li>
+</ul>
