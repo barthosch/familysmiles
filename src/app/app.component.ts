@@ -15,8 +15,16 @@ export class AppComponent {
   familymembers$: FirebaseListObservable<any[]>;
 
 
-  constructor(data: DataService) {
+  constructor(public data: DataService) {
+
     this.familymembers$ = data.familymembers$;
+  }
+
+
+  addMember(ev: any) {
+    console.log(ev.target.value);
+    this.data.addMember(ev.target.value);
+
   }
 
 }

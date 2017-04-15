@@ -4,6 +4,9 @@
 
 <ul>
   <li *ngFor="let member of familymembers$ | async">
-    <input [(ngModel)]="member.$value" (keyup.enter)="alert('hallo');">
+    {{member.$value}} <div (click)="data.deleteMember(member.$key)">delete</div>
   </li>
 </ul>
+
+Add member
+<input [(ngModel)]="data.newMemberName" (keyup.enter)="data.addMember($event.target.value)">
