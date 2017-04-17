@@ -1,0 +1,7 @@
+<div class="member">
+  <div class="member-name">
+    <div class="member-image"></div>
+    {{member.name}}
+  </div>
+  <app-smiley *ngFor="let day of weekdays" (smileValueRotated)="setRating({day: day, value: $event})" [smileValue]="member.ratings[day]"></app-smiley>
+</div>

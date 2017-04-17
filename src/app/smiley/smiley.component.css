@@ -1,0 +1,26 @@
+.smile::before {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  font-size: 3vw;
+  text-align: center;
+}
+.smile {
+  flex-grow: 1;
+  position: relative;
+  width: 3.5em;
+  height: 1.5em;
+  cursor: pointer;
+  font-size: 3vw;
+}
+.smile:hover {
+  background: #eee;
+}
+.smile-0::before {
+  content: "😢"
+}
+.smile-1::before {
+  content: "😐"
+}
+.smile-2::before {
+  content: "😁"
+}

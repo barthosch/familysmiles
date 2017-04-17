@@ -1,0 +1,15 @@
+.member {
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  border-bottom: 1px solid #666;
+  padding: 1em 0;
+}
+
+.member .member-name {
+  flex-grow: 2;
+}
+
+.member * {
+  border-right: 1px solid #666;
+}

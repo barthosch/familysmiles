@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { DataService } from './data.service';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
+import { SmileyComponent } from './smiley/smiley.component';
+import { MemberComponent } from './member/member.component';
 
 
 export const firebaseConfig = {
@@ -18,7 +20,9 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SmileyComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,

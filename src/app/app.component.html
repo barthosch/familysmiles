@@ -2,11 +2,9 @@
   {{title}}
 </h1>
 
-<ul>
-  <li *ngFor="let member of familymembers$ | async">
-    {{member.$value}} <div (click)="data.deleteMember(member.$key)">delete</div>
-  </li>
-</ul>
+<app-member *ngFor="let member of dataService.familymembers$ | async"
+            [member]="member"
+            (ratingChanged)="dataService.setRating(member, $event)">
+</app-member>
 
-Add member
-<input [(ngModel)]="data.newMemberName" (keyup.enter)="data.addMember($event.target.value)">
+
